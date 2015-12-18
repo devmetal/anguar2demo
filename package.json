@@ -4,7 +4,7 @@
   "scripts": {
     "start": "npm run build & npm run lite",
     "build": "browserify ./src/main.js -o ./public/bundle.js",
-    "lite": "lite-server"
+    "lite": "lite-server --files './index.html' './public/**/*.js'"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
@@ -17,7 +17,9 @@
     "babelify": "^7.2.0",
     "babylon": "^6.3.20",
     "browserify": "^12.0.1",
-    "lite-server": "^1.3.1"
+    "lite-server": "^1.3.1",
+    "markdown": "^0.5.0",
+    "watchify": "^3.6.1"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.2",
@@ -33,11 +35,10 @@
         {
           "presets": [
             "es2015",
-            "stage-0"
+            "stage-1"
           ],
           "plugins": [
-            "transform-async-to-generator",
-            "angular2-annotations"
+            "transform-async-to-generator"
           ]
         }
       ]

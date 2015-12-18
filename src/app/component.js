@@ -1,23 +1,23 @@
 'use strict';
 
-import 'zone.js/lib/browser/zone-microtask';
-import 'reflect-metadata';
-import 'babel-polyfill';
-
 import {
-  Component, bootstrap
-} from 'angular2/angular2';
+  ComponentMetadata
+} from 'angular2/core';
 
-@Component({
-  selector: 'my-app'
-})
-@View({
-  template: '<div><h1>My first angular2 app</h1><p>{{message}}</p></div>'
-});
+import MarkdownEditor from './markdown';
+
 class AppComponent {
-  constructor(){
-    this.message = 'Hello Angular2';
+  constructor() {
+    this.message = 'Hello Angular 2';
   }
 }
 
-bootstrap(AppComponent);
+AppComponent.annotations = [
+  new ComponentMetadata({
+    selector: 'my-app',
+    template: '<div><h1>My first Angular2 app</h1>{{message}}<md-editor></md-editor></div>',
+    directives: [MarkdownEditor]
+  })
+];
+
+export default AppComponent;
