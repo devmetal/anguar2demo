@@ -4,7 +4,7 @@ import {
   ComponentMetadata
 } from 'angular2/core';
 
-import {MarkdownService} from './markdown.service';
+import MarkdownService from './markdown.service';
 
 class MarkdownEditor {
   constructor(mdsrv) {

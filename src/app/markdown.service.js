@@ -2,11 +2,8 @@
 
 import {markdown} from 'markdown';
 
-function MarkdownService() {
+export default class {
+  toHtml(md) {
+    return markdown.toHTML(md);
+  }
 }
-
-MarkdownService.prototype.toHtml = function toHtml(md) {
-  return markdown.toHTML(md);
-}
-
-exports.MarkdownService = MarkdownService;
