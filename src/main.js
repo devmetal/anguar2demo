@@ -6,5 +6,8 @@ import 'babel-polyfill';
 
 import AppComponent   from './app/component.js';
 import { bootstrap }  from 'angular2/bootstrap';
+import { ROUTER_PROVIDERS } from 'angular2/router';
 
-bootstrap(AppComponent);
+bootstrap(AppComponent, [
+  ROUTER_PROVIDERS
+]);
