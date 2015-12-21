@@ -17,7 +17,10 @@ gulp.task('browserify', function(){
 		"presets": [
 				"es2015",
 				"stage-0"
-			]
+			],
+		"plugins": [
+			"transform-decorators-legacy"
+		]
 	})
 	.bundle()
 	.on('error', function(err) {
