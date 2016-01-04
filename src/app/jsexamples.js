@@ -71,6 +71,6 @@ export default class {
   }
 
   fn() {
-    return true;
+    return true
   }
 }
